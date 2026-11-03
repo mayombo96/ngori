@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>MAMO SERVICES - PS4 Exploit Host</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --mamo-blue-primary: #0056b3;
+            --mamo-blue-electric: #0088ff;
+            --mamo-blue-light: #e6f2ff;
+            --bg-body: #0d1b2a;
+            --text-white: #ffffff;
+            --accent-gold: #38bdf8; /* Harmonisé avec le bleu électrique/cyan de ton identité */
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-white);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 220px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 136, 255, 0.3);
+        }
+
+        h1 {
+            color: var(--text-white);
+            font-size: 24px;
+            margin-top: 15px;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--mamo-blue-electric), transparent);
+            width: 60%;
+            margin: 15px auto;
+        }
+
+        .btn {
+            background-color: var(--mamo-blue-primary);
+            color: var(--text-white);
+            border: none;
+            padding: 12px 22px;
+            margin: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 86, 179, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover, .btn:focus {
+            background-color: var(--mamo-blue-electric);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 136, 255, 0.6);
+            outline: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #crypto {
+            display: none;
+            background: #1b263b;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 450px;
+            margin: 20px auto;
+            border: 1px solid var(--mamo-blue-electric);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+
+        .crypto-addr {
+            font-size: 0.8rem; 
+            color: var(--accent-gold); 
+            margin: 8px 0; 
+            word-break: break-all; 
+            font-family: monospace;
+            background: rgba(0,0,0,0.2);
+            padding: 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var histlength = history.length;
+        history.go(-histlength + 2);
+    </script>
+
+    <div style="width: 100%; max-width: 900px; margin: 0 auto;">
+        <!-- Ton Logo MAMO SERVICES en haut -->
+        <img src="logo.png" alt="MAMO SERVICES" class="logo" style="margin-top: 20px;">
+        
+        <h1 id="msgs">MAMO SERVICES - PS4 Host</h1>
+        <hr>
+        <br>
+
+        <div id="menu">
+            <h1 style="font-size: 1.2rem; color: var(--accent-gold); margin-bottom: 15px;">Sélectionne ton Firmware</h1>
+            
+            <button class="btn btn-multi" onmouseover="msgs.innerHTML='PS4 GoldHEN Host pour 5.05 et 7.00 à 13.52 FW'" onmouseout="msgs.innerHTML='MAMO SERVICES - PS4 Host'" onclick="location.replace('g2all/index.html')"> GoldHEN Multi FW </button>
+            <button class="btn" onmouseover="msgs.innerHTML='PS4 5.05 FW Host v2.5'" onmouseout="msgs.innerHTML='MAMO SERVICES - PS4 Host'" onclick="location.replace('505/index.html')"> 5.05 FW v2.5 </button>
+            <a href="672goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW GoldHEN Host'" onmouseout="msgs.innerHTML='MAMO SERVICES - PS4 Host'"> 6.72 FW GoldHEN </button></a>
+            <a href="672/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW Host v3.0'" onmouseout="msgs.innerHTML='MAMO SERVICES - PS4 Host'"> 6.72 FW v3.0 </button></a>
+            <br>
+            <a href="900goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW GoldHEN Host'" onmouseout="msgs.innerHTML='MAMO SERVICES - PS4 Host'"> 9.00 FW GoldHEN </button></a>
+            <a href="900v3/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW Host v3.0'" onmouseout="msgs.innerHTML='MAMO SERVICES - PS4 Host'"> 9.00 FW v3.0 </button></a>
+            <br>
+            <button class="btn" onmouseover="msgs.innerHTML='Restaurer le Guide d&#8217;Utilisation sans DNS'" onmouseout="msgs.innerHTML='MAMO SERVICES - PS4 Host'" onclick="location.replace('restore/index.html')"> Restore Host </button>
+            <br>
+            <button class="btn btn-onln" onmouseover="msgs.innerHTML='Soutenir le créateur'" onmouseout="msgs.innerHTML='MAMO SERVICES - PS4 Host'" onclick="donations()" style="margin-top: 40px; margin-bottom: 20px;"> Afficher les dons Crypto </button>
+            
+            <footer style="margin-top: 30px;">
+                <p style="font-size: 0.9rem; color: #94a3b8;">Design personnalisé et administré par <strong>MAMO SERVICES</strong></p>
+            </footer>
+        </div>
+
+        <div id="crypto">
+            <h1 style="font-size: 1.1rem; color: var(--accent-gold);">Bitcoin (BTC) :</h1>
+            <img src="btc.jpg" width="120" height="120" style="border-radius: 8px; border: 2px solid var(--mamo-blue-electric);" alt="BTC QR">
+            <p class="crypto-addr">bc1q6cnsykmvem6zgw8wag3ygee0jkhtxj6rkp2nrm</p>
+            <br>
+            <h1 style="font-size: 1.1rem; color: var(--accent-gold);">Ethereum (ETH) :</h1>
+            <img src="eth.jpg" width="120" height="120" style="border-radius: 8px; border: 2px solid var(--mamo-blue-electric);" alt="ETH QR">
+            <p class="crypto-addr">0x7Ae1825ddE196925dB8B7832F436cA0eAeaF932c</p>
+            <br>
+            <button class="btn" onclick="load_menu()" style="margin-top: 10px;"> Retour </button>
+        </div>
+    </div>
+
+    <script>
+        function donations(){
+            document.getElementById("crypto").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function load_menu(){
+            document.getElementById("menu").style.display = "block";
+            document.getElementById("crypto").style.display = "none";
+        }
+    </script>
+</body>
+</html>
